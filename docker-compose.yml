@@ -1,0 +1,15 @@
+services:
+  web-app:
+    build: .
+    ports:
+      - "8080:5000"
+    environment:
+      - TYPE=jsonip
+      - REDIS_HOST=redis
+    volumes:
+      - ./logs:/app/logs
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:alpine

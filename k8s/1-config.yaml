@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: arch-config
+data:
+  TYPE: "jsonip"
+  REDIS_HOST: "redis-service"
